@@ -1,0 +1,132 @@
+{
+  "photo": "/photo.jpg",
+  "role": "Client Service Advisor",
+  "greeting": "Hello, I’m",
+  "name": "Ho Lylin",
+  "phone": "(+855) 71 323 2888",
+  "email": "Lylin135@gmail.com",
+  "address": [
+    "St326, Phsar DermKor,",
+    "ToulKork , Phnom Penh, Cambodia"
+  ],
+  "sections": [
+    {
+      "id": "work",
+      "column": "left",
+      "title": "Work Experience",
+      "type": "experience",
+      "items": [
+        {
+          "title": "Aii Language Center",
+          "role": "Chinese Teacher",
+          "period": "Sep 2025 - Current",
+          "points": [
+            "Taught Chinese to students of different ages and levels",
+            "Prepared lessons and materials based on students’ needs",
+            "Tracked student progress and gave support when needed"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "volunteer",
+      "column": "left",
+      "title": "Volunteer Experience",
+      "type": "experience",
+      "items": [
+        {
+          "title": "One Book One Community",
+          "role": "Sub-Leader",
+          "period": "2025",
+          "points": [
+            "Translated educational video from Chinese to Khmer",
+            "Coordinated volunteers and managed event supplies",
+            "Collected participant data and supported event logistics"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "about",
+      "column": "right",
+      "title": "About Me",
+      "type": "text",
+      "text": "I am a motivated Chinese language graduate with good translation and organizing skills. I enjoy talking with people and solving problems for them. I want to work as a Client Service Advisor, where I can use my Chinese and my teamwork experience to help clients and support the team."
+    },
+    {
+      "id": "education",
+      "column": "right",
+      "title": "Education History",
+      "type": "entries",
+      "items": [
+        {
+          "title": "OIS International School",
+          "detail": "Graduated secondary school",
+          "period": "2010-2018"
+        },
+        {
+          "title": "BELTEI International School",
+          "detail": "Graduated High School",
+          "period": "2019-2023"
+        },
+        {
+          "title": "Toun Fa School",
+          "detail": "Graduated Chinese Diploma",
+          "period": "2013-2024"
+        },
+        {
+          "title": "Australian Centre for Education",
+          "detail": "Graduated Gep 12",
+          "period": "2023-2025"
+        },
+        {
+          "title": "National University of Management",
+          "detail": "Major of Banking and Finance",
+          "period": "2023-2026"
+        }
+      ]
+    },
+    {
+      "id": "achievement",
+      "column": "right",
+      "title": "Achievement",
+      "type": "awards",
+      "items": [
+        {
+          "title": "National Khmer Exam - B+",
+          "date": "December/2022"
+        },
+        {
+          "title": "HSK Level 5 - 汉语水平考试",
+          "date": "November/2024"
+        },
+        {
+          "title": "IELTS Exam - 5.5",
+          "date": "June/2025"
+        }
+      ]
+    },
+    {
+      "id": "reference",
+      "column": "right",
+      "title": "Reference",
+      "type": "text",
+      "text": "Mengthu Hout - Head of Chinese Department at Aii MTT\nEmail: mengthu.hout@aii.edu.kh\nContact Number: (+855) 95 788 137"
+    },
+    {
+      "id": "skills",
+      "column": "left",
+      "title": "Soft Skills",
+      "type": "bullets",
+      "items": [
+        "Communication",
+        "Patient",
+        "Flexibility",
+        "Adaptability",
+        "Time Management",
+        "Leadership",
+        "Teamwork"
+      ]
+    }
+  ]
+}

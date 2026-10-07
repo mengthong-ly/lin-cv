@@ -1,7 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  // Saving sends the undo history too (up to ~100 copies of the CV).
+  experimental: { serverActions: { bodySizeLimit: "5mb" } },
 };
 
 export default nextConfig;

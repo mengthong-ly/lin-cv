@@ -1,0 +1,157 @@
+{
+  "photo": "/photo.jpg",
+  "role": "Chinese Teacher",
+  "greeting": "Hello, I’m",
+  "name": "Ho Lylin",
+  "phone": "(+855) 71 323 2888",
+  "email": "Lylin135@gmail.com",
+  "address": [
+    "St326, Phsar DermKor,",
+    "ToulKork , PhnomPenh, Cambodia"
+  ],
+  "sections": [
+    {
+      "id": "volunteer",
+      "column": "left",
+      "title": "Volunteer Experience",
+      "type": "experience",
+      "items": [
+        {
+          "title": "One Book One Community",
+          "role": "Sub-leader",
+          "period": "May 2024-2023",
+          "points": [
+            "Translated educational videos from Chinese to Khmer",
+            "Managed inventory and supplies for the community events",
+            "Coordinated volunteers and supported HR-related activities",
+            "Collected and organized participant data",
+            "Supported event logistics and communication"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "about",
+      "column": "right",
+      "title": "About Me",
+      "type": "text",
+      "text": "A dedicated and motivated Chinese language student with strong translation and organizational skills. Seeking opportunities to apply language knowledge and teamwork experience in a dynamic, professional environment."
+    },
+    {
+      "id": "education",
+      "column": "right",
+      "title": "Education History",
+      "type": "entries",
+      "items": [
+        {
+          "title": "OIS International School",
+          "detail": "Graduated secondary school",
+          "period": "2010-2018"
+        },
+        {
+          "title": "BELTEI International School",
+          "detail": "Graduated High School",
+          "period": "2019-2023"
+        },
+        {
+          "title": "Toun Fa School",
+          "detail": "Graduated Chinese Diploma",
+          "period": "2013-2024"
+        },
+        {
+          "title": "Australian Centre for Education",
+          "detail": "Graduated Gep 12",
+          "period": "2023-2025"
+        },
+        {
+          "title": "National University of Management",
+          "detail": "Major of Banking and Finance",
+          "period": "2023- Current"
+        },
+        {
+          "title": "Title",
+          "detail": "Detail",
+          "period": "2025"
+        },
+        {
+          "title": "Title",
+          "detail": "Detail",
+          "period": "2025"
+        }
+      ]
+    },
+    {
+      "id": "achievement",
+      "column": "left",
+      "title": "Achievement",
+      "type": "awards",
+      "items": [
+        {
+          "title": "National Khmer Exam - B+",
+          "date": "December/2022"
+        },
+        {
+          "title": "HSK Level 5 - 汉语水平考试",
+          "date": "November/2024"
+        },
+        {
+          "title": "IELTS Exam - 5.5",
+          "date": "June/2025"
+        }
+      ]
+    },
+    {
+      "id": "hobby",
+      "column": "right",
+      "title": "Hobby and Interest",
+      "type": "icons",
+      "items": [
+        {
+          "label": "Music",
+          "icon": "headphones"
+        },
+        {
+          "label": "Reading",
+          "icon": "tablet"
+        },
+        {
+          "label": "Traveling",
+          "icon": "luggage"
+        },
+        {
+          "label": "Label",
+          "icon": "star"
+        },
+        {
+          "label": "Label",
+          "icon": "star"
+        },
+        {
+          "label": "Label",
+          "icon": "star"
+        }
+      ]
+    },
+    {
+      "id": "skills",
+      "column": "left",
+      "title": "Soft Skills",
+      "type": "bullets",
+      "items": [
+        "Communication",
+        "Teamwork",
+        "Flexibility",
+        "Adaptability",
+        "Time Management",
+        "Leadership"
+      ]
+    },
+    {
+      "id": "reference",
+      "column": "right",
+      "title": "Reference",
+      "type": "text",
+      "text": "Not Available at the Moment"
+    }
+  ]
+}

@@ -1,0 +1,171 @@
+/* Sized in px against a 794px-wide sheet (A4 at 96dpi). */
+
+@page { size: A4; margin: 0; }
+
+.desk {
+  --paper: #f2f0ed;
+  --card: #e8e5df;
+  --ink: #141414;
+  --soft: #4a4a4a;
+  --lime: #d4de2a;
+  --olive: #7d8c10;
+  min-height: 100vh;
+  background: #cfcdc9;
+  padding: 24px 0;
+  color: var(--ink);
+  font-size: 12.5px;
+  line-height: 1.38;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+.desk * { box-sizing: border-box; margin: 0; padding: 0; }
+
+.page {
+  position: relative;
+  width: 210mm;
+  min-height: 297mm;
+  margin: 0 auto;
+  background: var(--paper);
+  padding: 32px 45px 24px;
+  box-shadow: 0 2px 16px rgb(0 0 0 / 0.12);
+}
+/* On screen, a dashed line marks where page 2 starts if content overflows. */
+.page::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 297mm;
+  border-top: 1px dashed #b33;
+}
+
+.toolbar { position: fixed; z-index: 1; top: 16px; right: 16px; display: flex; gap: 8px; }
+.tool {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--ink);
+  color: #fff;
+  font: inherit;
+  font-weight: 500;
+  cursor: pointer;
+}
+.tool[aria-pressed="true"] { background: var(--lime); color: var(--ink); }
+.tool:focus-visible { outline: 2px solid var(--lime); outline-offset: 2px; }
+
+.status { align-self: center; padding: 4px 10px; border-radius: 999px; background: var(--paper); font-size: 11.5px; }
+
+/* Edit mode: outline typeable text, show a hint in emptied fields. */
+.editing [contenteditable] { cursor: text; }
+.editing [contenteditable]:is(:hover, :focus) { outline: 1px dashed var(--olive); outline-offset: 2px; }
+.editing [contenteditable]:empty::before { content: attr(data-placeholder); opacity: 0.4; }
+
+.section, .card, .ach, .hobby { position: relative; }
+.head { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; }
+.controls { display: flex; gap: 2px; }
+.mini {
+  display: grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  border: 0;
+  border-radius: 6px;
+  background: rgb(0 0 0 / 0.07);
+  color: var(--ink);
+  cursor: pointer;
+}
+.mini:disabled { opacity: 0.3; cursor: default; }
+.del {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  display: grid;
+  place-items: center;
+  width: 18px;
+  height: 18px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--ink);
+  color: #fff;
+  cursor: pointer;
+}
+li > .del { position: static; display: inline-grid; margin-left: 6px; vertical-align: middle; }
+.ach > .del { top: 0; right: -10px; }
+.hobby > .del { top: -6px; right: -6px; }
+.add, .addSection {
+  border: 1px dashed var(--soft);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--soft);
+  font: inherit;
+  cursor: pointer;
+}
+.add { display: flex; align-items: center; gap: 4px; margin-top: 6px; padding: 2px 10px; font-size: 11px; }
+.addSection { display: block; width: 100%; margin-top: 20px; padding: 8px 10px; }
+:is(.mini, .del, .add, .addSection, .circle):focus-visible { outline: 2px solid var(--olive); outline-offset: 2px; }
+
+@media print {
+  .desk { padding: 0; background: none; }
+  /* clone: every printed page gets the top and bottom padding, not just page 1. */
+  .page { min-height: auto; box-shadow: none; background: none; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+  .page::after, .ui { display: none !important; }
+  .page * { outline: none !important; }
+  /* Long cards may split across pages (each piece keeps its padding and
+     corners), but between lines and entries, never right after a heading. */
+  .card { box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+  .head, .page h2 { break-after: avoid; }
+  .edu, .ach, .hobby, .page li, .page p { break-inside: avoid; }
+}
+
+.page h2 { font-size: 16px; font-weight: 700; margin-bottom: 9px; letter-spacing: -0.1px; }
+.card { background: var(--card); border-radius: 12px; padding: 15px 20px; }
+.card + .card { margin-top: 7px; }
+.pill { display: inline-block; background: var(--lime); border-radius: 999px; padding: 1px 12px; font-weight: 500; font-size: 11px; white-space: nowrap; }
+.accent { color: var(--olive); }
+
+.cols { display: grid; grid-template-columns: 245px 1fr; column-gap: 36px; }
+.stack > section + section { margin-top: 20px; }
+.multi { white-space: pre-wrap; }
+
+/* hero */
+.photo { width: 128px; height: 128px; border-radius: 50%; object-fit: cover; display: block; background: #fff; }
+.role { display: flex; align-items: center; gap: 8px; margin-top: 14px; }
+.dot { width: 22px; height: 22px; border-radius: 50%; background: var(--ink); display: grid; place-items: center; }
+.role .pill { font-size: 13px; font-weight: 600; padding: 1px 24px; }
+.hello { font-size: 41px; font-weight: 700; line-height: 1.02; letter-spacing: -1px; margin: 12px 0 22px; }
+
+/* contact */
+.contactRow { display: flex; gap: 38px; }
+.contactRow h2 { margin-bottom: 6px; }
+.line { display: flex; align-items: center; gap: 10px; font-size: 13px; margin-bottom: 4px; }
+.ico { width: 19px; height: 19px; border-radius: 50%; background: var(--ink); color: var(--lime); display: grid; place-items: center; flex: none; }
+
+/* volunteer */
+.job { font-size: 13.5px; font-weight: 600; }
+.as { font-size: 13.5px; margin-bottom: 6px; }
+.bullets { padding-left: 13px; margin-top: 12px; }
+.bullets li { margin-bottom: 2px; padding-left: 2px; }
+
+/* education */
+.edu { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 11px 20px; }
+.edu b, .ach small { display: block; }
+.edu b { font-weight: 600; font-size: 13px; color: #2b2b2b; }
+.edu span:not(.pill) { color: var(--soft); font-size: 13px; }
+
+/* achievement */
+.ach + .ach { margin-top: 5px; }
+.ach b { display: block; font-weight: 500; font-size: 13px; color: var(--olive); }
+.ach small { font-size: 10.5px; }
+
+/* hobbies */
+.hobbies { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 12px 70px; }
+.hobby { text-align: center; color: var(--soft); font-size: 13px; }
+.circle { width: 60px; height: 60px; border-radius: 50%; background: var(--lime); color: var(--ink); display: grid; place-items: center; margin: 0 auto 4px; border: 0; font: inherit; }
+button.circle { cursor: pointer; }
+
+/* skills */
+.skills li { list-style: none; position: relative; padding-left: 18px; margin-bottom: 1px; }
+.skills li::before { content: ""; position: absolute; left: 0; top: 6px; width: 5px; height: 5px; border-radius: 50%; background: var(--lime); }

@@ -1,0 +1,2 @@
+# The CLI ignores .gitignore, so keep the editor undo history out of deploys here too.
+cv.history.json
